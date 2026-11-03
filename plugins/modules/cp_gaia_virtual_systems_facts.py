@@ -78,6 +78,33 @@ ansible_facts:
                     returned: always
                     type: list
                     elements: str
+                virtual_switches:
+                    description: Virtual Switches the Virtual System is connected to.
+                    returned: For Virtual Systems of type Gateway.
+                    type: list
+                    elements: dict
+                    contains:
+                        id:
+                            description: Virtual Switch ID.
+                            returned: always
+                            type: int
+                        connected_through:
+                            description: Interface through which the Virtual System is connected to the Virtual Switch.
+                            returned: always
+                            type: str
+                resources:
+                    description: Resources allocated to the Virtual System.
+                    returned: For Virtual Systems of type Gateway.
+                    type: dict
+                    contains:
+                        firewall_ipv4_instances:
+                            description: Number of IPv4 firewall instances.
+                            returned: always
+                            type: int
+                        firewall_ipv6_instances:
+                            description: Number of IPv6 firewall instances.
+                            returned: always
+                            type: int
         from:
             description: From which element number the query was done.
             returned: always

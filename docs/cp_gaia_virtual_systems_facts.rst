@@ -85,6 +85,32 @@ ansible_facts (always., dict, )
       Network interfaces attached to the Virtual System.
 
 
+    virtual_switches (For Virtual Systems of type Gateway., list, )
+      Virtual Switches the Virtual System is connected to.
+
+
+      id (always, int, )
+        Virtual Switch ID.
+
+
+      connected_through (always, str, )
+        Interface through which the Virtual System is connected to the Virtual Switch.
+
+
+
+    resources (For Virtual Systems of type Gateway., dict, )
+      Resources allocated to the Virtual System.
+
+
+      firewall_ipv4_instances (always, int, )
+        Number of IPv4 firewall instances.
+
+
+      firewall_ipv6_instances (always, int, )
+        Number of IPv6 firewall instances.
+
+
+
 
   from (always, int, )
     From which element number the query was done.
